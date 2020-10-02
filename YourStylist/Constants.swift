@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct K {
+    static let signInSegue = "goToGuides"
+    static let registerSegue = "goToRegister"
+    static let organizeSegue = "goToOrganize"
+    static let registerToWelcomeSegue = "backToWelcome"
+    static let photoDetailSegue = "goToPhotoDetail"
+    
+    static let guideDetailTableViewCellIdentifier = "PhotoCell"
+    
+    static let adminEmail = "omavitas@gmail.com"
+}

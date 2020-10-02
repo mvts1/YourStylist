@@ -9,5 +9,9 @@
 import UIKit
 
 class GuidesCell: UICollectionViewCell {
+    static let reuseIdentifier = String(describing: GuidesCell.self)
     
+    @IBOutlet weak var guideImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var snippetLabel: UILabel!
 }

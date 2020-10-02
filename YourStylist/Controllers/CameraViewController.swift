@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import CameraManager
 
 class CameraViewController: UIViewController {
 
+    @IBOutlet weak var cameraView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let cameraManager = CameraManager()
+        cameraManager.addPreviewLayerToView(self.cameraView)
         // Do any additional setup after loading the view.
     }
     

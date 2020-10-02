@@ -1,26 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oQs-7X-Uge">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Ask a stylist-->
         <scene sceneID="hJp-iW-jJo">
             <objects>
-                <viewController id="oQs-7X-Uge" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskVC" id="oQs-7X-Uge" customClass="AskViewController" customModule="YourStylist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g4y-YL-kB9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiZ-3J-lh0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="17"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Ask a stylist" id="kYk-Df-CQm">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RUN-bH-W90">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="cancelButtonPressed:" destination="oQs-7X-Uge" id="2GK-NZ-Xdr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-n6-X1X">
+                                <rect key="frame" x="20" y="104" width="70" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="FRd-gi-IYa"/>
+                                    <constraint firstAttribute="width" constant="70" id="Pu8-vp-BvS"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="add_photo"/>
+                                <connections>
+                                    <action selector="photoButtonPressed:" destination="oQs-7X-Uge" eventType="touchUpInside" id="tfO-Ww-7NQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Describe your vision for the outfit or ask for advice" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="53M-jY-vcI">
+                                <rect key="frame" x="20" y="185" width="374" height="32.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="53M-jY-vcI" firstAttribute="top" secondItem="6Db-n6-X1X" secondAttribute="bottom" constant="15" id="2Cr-Oe-37I"/>
+                            <constraint firstItem="AiZ-3J-lh0" firstAttribute="top" secondItem="HEr-JF-iBA" secondAttribute="top" id="3Ih-ti-3IV"/>
+                            <constraint firstItem="AiZ-3J-lh0" firstAttribute="centerX" secondItem="g4y-YL-kB9" secondAttribute="centerX" id="60W-JL-Nrs"/>
+                            <constraint firstItem="AiZ-3J-lh0" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" id="Cfu-lC-SJR"/>
+                            <constraint firstItem="6Db-n6-X1X" firstAttribute="top" secondItem="AiZ-3J-lh0" secondAttribute="bottom" constant="16" id="IYe-tD-tVP"/>
+                            <constraint firstItem="HEr-JF-iBA" firstAttribute="trailing" secondItem="53M-jY-vcI" secondAttribute="trailing" constant="20" id="jjJ-Bb-WEU"/>
+                            <constraint firstItem="53M-jY-vcI" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" constant="20" id="ldU-ev-vLp"/>
+                            <constraint firstItem="6Db-n6-X1X" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" constant="20" id="s5V-zF-VOv"/>
+                            <constraint firstItem="53M-jY-vcI" firstAttribute="centerX" secondItem="g4y-YL-kB9" secondAttribute="centerX" id="zB8-UA-RDb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HEr-JF-iBA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ufm-jC-uoc"/>
+                    <tabBarItem key="tabBarItem" title="Ask" image="ask" id="REd-Tj-apw"/>
+                    <navigationItem key="navigationItem" title="Ask a stylist" id="Ufm-jC-uoc" userLabel="Ask a stylist">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="w5e-Nr-BFS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="RUN-bH-W90" id="y0Z-R4-M8G"/>
+                        <outlet property="photoButton" destination="6Db-n6-X1X" id="lwq-hD-KJN"/>
+                        <outlet property="textView" destination="53M-jY-vcI" id="8nF-YY-6f1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Id-dO-8BK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-967" y="809"/>
+            <point key="canvasLocation" x="852.17391304347836" y="808.92857142857144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6fd-Wy-ry8">
+            <objects>
+                <viewController id="DHH-YY-UIj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JB8-kI-Agq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jlg-34-ZH6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1w-0r-R5T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597" y="1143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uv8-0I-Xfs">
+            <objects>
+                <viewController id="9Ag-df-6kp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSu-V3-PQt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0ZY-uc-OgJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkD-rW-zx3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="462"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add_photo" width="170.5" height="170.5"/>
+        <image name="ask" width="16.5" height="16.5"/>
+    </resources>
 </document>
