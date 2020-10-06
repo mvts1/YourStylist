@@ -7,28 +7,28 @@
 //
 
 import UIKit
-import CameraManager
 
 class CameraViewController: UIViewController {
-
-    @IBOutlet weak var cameraView: UIView!
     
+    static let identifier = String(describing: CameraViewController.self)
+    var imagePicker: ImagePicker!
+    
+    @IBOutlet weak var imageView: UIImageView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cameraManager = CameraManager()
-        cameraManager.addPreviewLayerToView(self.cameraView)
-        // Do any additional setup after loading the view.
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func showImagePicker(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
     }
-    */
 
+}
+
+extension CameraViewController: ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        self.imageView.image = image
+    }
 }
