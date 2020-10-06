@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eyV-Iy-srC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="exz-7V-duh">
+            <objects>
+                <viewController id="g31-lH-UA6" customClass="ProfileViewController" customModule="YourStylist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYR-yV-tCw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc1-8g-iuS">
+                                <rect key="frame" x="180" y="423" width="55" height="50"/>
+                                <state key="normal" image="pencil" catalog="system"/>
+                                <connections>
+                                    <action selector="organizeButtonPressed:" destination="g31-lH-UA6" eventType="touchUpInside" id="ZgH-pz-x11"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pc1-8g-iuS" firstAttribute="centerX" secondItem="eYR-yV-tCw" secondAttribute="centerX" id="1YO-fe-dvS"/>
+                            <constraint firstItem="pc1-8g-iuS" firstAttribute="centerY" secondItem="eYR-yV-tCw" secondAttribute="centerY" id="l8K-ii-nQw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i0M-0P-74E"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="9Se-4V-RDb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Q1-sD-mww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834.78260869565224" y="580.58035714285711"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="f57-9f-BfA">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNav" automaticallyAdjustsScrollViewInsets="NO" id="eyV-Iy-srC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="profile" id="Ee7-Ev-e1M"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="55U-Pv-iWc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g31-lH-UA6" kind="relationship" relationship="rootViewController" id="Oto-vZ-JYT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boU-9e-TbD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75.362318840579718" y="580.58035714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="profile" width="16.5" height="16.5"/>
+    </resources>
+</document>

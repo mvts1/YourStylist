@@ -37,7 +37,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signInPressed:" destination="3gG-Uk-Vzk" eventType="touchUpInside" id="KTH-9D-AKk"/>
-                                    <segue destination="0FR-8Z-vrt" kind="presentation" identifier="goToGuides" modalPresentationStyle="fullScreen" id="WdT-mx-RF9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFz-OU-dXq" userLabel="Email Textfield">
@@ -105,6 +104,7 @@
                         <outlet property="passwordTextField" destination="9D9-MA-plO" id="pET-Vc-Mv3"/>
                         <outlet property="registerButton" destination="twT-J9-diT" id="84N-gU-fbh"/>
                         <outlet property="signInButton" destination="MTg-jB-JDR" id="0tb-gZ-4Mr"/>
+                        <segue destination="0FR-8Z-vrt" kind="presentation" identifier="goToGuides" modalPresentationStyle="fullScreen" id="K8b-5K-tX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE1-gw-mKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

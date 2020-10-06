@@ -14,6 +14,8 @@ struct K {
     static let organizeSegue = "goToOrganize"
     static let registerToWelcomeSegue = "backToWelcome"
     static let photoDetailSegue = "goToPhotoDetail"
+    static let cameraSegue = "goToCamera"
+    static let photoLibrarySegue = "goToPhotoLibrary"
     
     static let guideDetailTableViewCellIdentifier = "PhotoCell"
     
