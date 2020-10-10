@@ -8,23 +8,38 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController {
+class FeedbackViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    var currentTableView: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func switchTableViewAction(_ sender: UISegmentedControl) {
+        currentTableView = sender.selectedSegmentIndex
+        tableView.reloadData()
     }
-    */
-
 }
+
+//extension FeedbackViewController: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        //how many posts the user has uploaded?
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//
+//    }
+//
+//
+//}
+
+
+

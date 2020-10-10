@@ -15,10 +15,10 @@
 		773F75A024EBE15300B9DFED /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773F759E24EBE15300B9DFED /* Feedback.storyboard */; };
 		773F75A224EBE16300B9DFED /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773F75A124EBE16300B9DFED /* Profile.storyboard */; };
 		773F75A624EBE20600B9DFED /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773F75A524EBE20600B9DFED /* RegisterViewController.swift */; };
+		7747C2322531DC6D00FF33FC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747C2312531DC6D00FF33FC /* Post.swift */; };
 		775E79D924FFA4100022A91D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E79D824FFA4100022A91D /* Helper.swift */; };
 		775E79DD24FFACCD0022A91D /* GuideDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E79DC24FFACCD0022A91D /* GuideDetailController.swift */; };
 		7766B3E624F6F9160041529B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766B3E524F6F9160041529B /* Constants.swift */; };
-		776D6D63252201DE0082B2B8 /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D6D62252201DE0082B2B8 /* PhotoLibraryViewController.swift */; };
 		776D6D65252202B80082B2B8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D6D64252202B80082B2B8 /* CameraViewController.swift */; };
 		776D6D6B25227A310082B2B8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D6D6A25227A310082B2B8 /* TabBarViewController.swift */; };
 		77A6075624FD918A002250B5 /* GuidesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A6075524FD918A002250B5 /* GuidesCell.swift */; };
@@ -94,10 +94,10 @@
 		773F759F24EBE15300B9DFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YourStylist/Views/Base.lproj/Feedback.storyboard; sourceTree = "<group>"; };
 		773F75A124EBE16300B9DFED /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		773F75A524EBE20600B9DFED /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7747C2312531DC6D00FF33FC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		775E79D824FFA4100022A91D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		775E79DC24FFACCD0022A91D /* GuideDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailController.swift; sourceTree = "<group>"; };
 		7766B3E524F6F9160041529B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		776D6D62252201DE0082B2B8 /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		776D6D64252202B80082B2B8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		776D6D6A25227A310082B2B8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		77A6075524FD918A002250B5 /* GuidesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidesCell.swift; sourceTree = "<group>"; };
@@ -310,10 +310,9 @@
 				775E79DC24FFACCD0022A91D /* GuideDetailController.swift */,
 				77F0E1D8251E13F100364A9B /* PhotoDetailViewController.swift */,
 				77AFA5E324EAB00300D90C1D /* AskViewController.swift */,
-				776D6D62252201DE0082B2B8 /* PhotoLibraryViewController.swift */,
 				776D6D64252202B80082B2B8 /* CameraViewController.swift */,
-				77AFA5E524EAB01E00D90C1D /* ProfileViewController.swift */,
 				77C6EA3524ED609900DDABBE /* FeedbackViewController.swift */,
+				77AFA5E524EAB01E00D90C1D /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +325,7 @@
 				771F2745250FF4AB00A3B661 /* GuideCollection.swift */,
 				77E00414251B5EC500B30F3B /* Photo.swift */,
 				77E00416251B6B8C00B30F3B /* PhotoCollection.swift */,
+				7747C2312531DC6D00FF33FC /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -604,13 +604,13 @@
 				775E79D924FFA4100022A91D /* Helper.swift in Sources */,
 				773F75A624EBE20600B9DFED /* RegisterViewController.swift in Sources */,
 				7737293B2527758F00BFBE99 /* ImagePicker.swift in Sources */,
-				776D6D63252201DE0082B2B8 /* PhotoLibraryViewController.swift in Sources */,
 				77AFA5AB24EAAF2B00D90C1D /* WelcomeViewController.swift in Sources */,
 				77B401162511FDBE0038EFC1 /* TitleSupplementaryView.swift in Sources */,
 				77B4011825135CB90038EFC1 /* BadgeSupplementaryView.swift in Sources */,
 				771F2744250FF3ED00A3B661 /* Guide.swift in Sources */,
 				77E00417251B6B8C00B30F3B /* PhotoCollection.swift in Sources */,
 				77AFA5A724EAAF2B00D90C1D /* AppDelegate.swift in Sources */,
+				7747C2322531DC6D00FF33FC /* Post.swift in Sources */,
 				77C6EA3624ED609900DDABBE /* FeedbackViewController.swift in Sources */,
 				77AFA5A924EAAF2B00D90C1D /* SceneDelegate.swift in Sources */,
 				77A6075624FD918A002250B5 /* GuidesCell.swift in Sources */,

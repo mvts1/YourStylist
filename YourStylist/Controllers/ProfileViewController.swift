@@ -12,15 +12,7 @@ import Firebase
 class ProfileViewController: UIViewController {
 
     @IBAction func organizeButtonPressed(_ sender: Any) {
-        let user = Auth.auth().currentUser
-        if let user = user {
-            if user.email == K.adminEmail {
-                performSegue(withIdentifier: K.organizeSegue, sender: self)
-            } else {
-                return
-            }
-        }
-            
+
     }
     
     override func viewDidLoad() {

@@ -15,7 +15,7 @@ class AskViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet var progressView: UIView!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var imagePicker: ImagePicker!
     @IBOutlet weak var pickerButton: UIButton!
@@ -33,6 +33,7 @@ class AskViewController: UIViewController {
         pickerButton.layer.borderWidth = 0.3
         pickerButton.layer.borderColor = UIColor.black.cgColor
         shareButton.isEnabled = false
+        progressBar.isHidden = true
         showImagePicker(pickerButton)
         
     }
@@ -40,6 +41,7 @@ class AskViewController: UIViewController {
 
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         if let user = Auth.auth().currentUser { //checks if there's a current user
+            progressBar.isHidden = false
             let imageId: String = UUID().uuidString.lowercased().replacingOccurrences(of: "-", with: "_")
             let imageName = "\(imageId).jpg"
             //create the path to this image on cloud, a folder for each user
@@ -57,9 +59,10 @@ class AskViewController: UIViewController {
                 print("Upload is complete and I got this back: \(String(describing: downloadMetaData))")
             }
             
-            taskReference.observe(.progress) { (snapshot) in //task snapshot object tells me about the current state of the upload
+            taskReference.observe(.progress) { [weak self] (snapshot) in //task snapshot object tells me about the current state of the upload
                 guard let pctThere = snapshot.progress?.fractionCompleted else { return }
                 print("You are \(pctThere) complete")
+                self?.progressBar.progress = Float(pctThere)
             }
             
         }

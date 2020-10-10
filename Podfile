@@ -10,6 +10,7 @@ target 'YourStylist' do
   pod 'Firebase/Auth'
   pod "Firebase/RemoteConfig"
   pod "Firebase/Storage"
+  pod "FirebaseUI/Storage"
 
   target 'YourStylistTests' do
     inherit! :search_paths

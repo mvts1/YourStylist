@@ -11,11 +11,13 @@ import Foundation
 struct K {
     static let signInSegue = "goToGuides"
     static let registerSegue = "goToRegister"
-    static let organizeSegue = "goToOrganize"
+    static let registerToGuidesSegue = "registerToGuides"
+    
     static let registerToWelcomeSegue = "backToWelcome"
     static let photoDetailSegue = "goToPhotoDetail"
     static let cameraSegue = "goToCamera"
     static let photoLibrarySegue = "goToPhotoLibrary"
+    static let admins: [String] = ["omavitas@gmail.com"]
     
     static let guideDetailTableViewCellIdentifier = "PhotoCell"
     

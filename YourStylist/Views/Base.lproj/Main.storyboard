@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gG-Uk-Vzk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gG-Uk-Vzk">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,12 +30,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-jB-JDR" userLabel="Sign in Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTg-jB-JDR" userLabel="Sign in Button">
                                 <rect key="frame" x="158" y="388.66666666666669" width="59" height="35"/>
                                 <color key="backgroundColor" name="BrandColor3"/>
                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                 <state key="normal" title="Sign in">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="signInPressed:" destination="3gG-Uk-Vzk" eventType="touchUpInside" id="KTH-9D-AKk"/>
@@ -64,12 +66,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twT-J9-diT" userLabel="Register Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twT-J9-diT" userLabel="Register Button">
                                         <rect key="frame" x="196.33333333333334" y="0.0" width="71.000000000000028" height="35"/>
                                         <color key="backgroundColor" name="BrandColor3"/>
                                         <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                         <state key="normal" title="Register">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="3gG-Uk-Vzk" eventType="touchUpInside" id="Pt7-OP-5Q7"/>
@@ -79,7 +81,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RzK-sA-QcC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RzK-sA-QcC" firstAttribute="trailing" secondItem="9D9-MA-plO" secondAttribute="trailing" constant="20" id="0CX-ep-Mak"/>
                             <constraint firstItem="MTg-jB-JDR" firstAttribute="centerX" secondItem="qzu-be-ghD" secondAttribute="centerX" id="1Se-JT-qSM"/>
@@ -96,7 +99,6 @@
                             <constraint firstItem="OFz-OU-dXq" firstAttribute="top" secondItem="YID-3r-IUF" secondAttribute="bottom" constant="10" id="hb6-Wu-cO5"/>
                             <constraint firstItem="YID-3r-IUF" firstAttribute="centerX" secondItem="qzu-be-ghD" secondAttribute="centerX" id="jaG-WU-D4b"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="RzK-sA-QcC"/>
                     </view>
                     <navigationItem key="navigationItem" id="Srd-kx-63g"/>
                     <connections>
@@ -124,7 +126,7 @@
                     <connections>
                         <segue destination="Ftp-SY-5cU" kind="relationship" relationship="viewControllers" id="jE0-Az-bIS"/>
                         <segue destination="Tgp-gb-Sv0" kind="relationship" relationship="viewControllers" id="9Hb-X8-au1"/>
-                        <segue destination="O31-SD-heP" kind="relationship" relationship="viewControllers" id="LQF-aO-QDa"/>
+                        <segue destination="eq2-cb-yPY" kind="relationship" relationship="viewControllers" id="4UN-sS-iEo"/>
                         <segue destination="uwi-93-2jE" kind="relationship" relationship="viewControllers" id="opq-Yv-We3"/>
                     </connections>
                 </tabBarController>
@@ -140,17 +142,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmE-Nv-Sqm" userLabel="Email Textfield">
-                                <rect key="frame" x="20" y="285.33333333333331" width="335" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3J-Oy-Dk3" userLabel="Username Textfield">
+                                <rect key="frame" x="20" y="323" width="335" height="34"/>
                                 <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-rT-NYb">
-                                <rect key="frame" x="152" y="378.33333333333331" width="71" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWi-rT-NYb">
+                                <rect key="frame" x="152" y="417" width="71" height="35"/>
                                 <color key="backgroundColor" name="BrandColor3"/>
                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="registerPressed:" destination="glF-Hz-ayM" eventType="touchUpInside" id="gDs-2z-hff"/>
@@ -165,12 +167,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYz-CU-mUw" userLabel="Register Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYz-CU-mUw" userLabel="Register Button">
                                         <rect key="frame" x="212" y="0.0" width="59" height="35"/>
                                         <color key="backgroundColor" name="BrandColor3"/>
                                         <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="19"/>
                                         <state key="normal" title="Sign in">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="3gG-Uk-Vzk" eventType="touchUpInside" id="z2O-Ji-sx4"/>
@@ -186,40 +188,45 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OvB-8A-KL6">
-                                <rect key="frame" x="20" y="329.33333333333331" width="335" height="34"/>
+                                <rect key="frame" x="20" y="365" width="335" height="34"/>
                                 <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-GG-Lat">
-                                <rect key="frame" x="166.66666666666666" y="250.00000000000003" width="41.666666666666657" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join us!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-GG-Lat">
+                                <rect key="frame" x="158" y="250" width="59" height="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmE-Nv-Sqm" userLabel="Email Textfield">
+                                <rect key="frame" x="20" y="281" width="335" height="34"/>
+                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bah-tV-B5c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rmE-Nv-Sqm" firstAttribute="leading" secondItem="bah-tV-B5c" secondAttribute="leading" constant="20" id="2VL-g9-qkS"/>
+                            <constraint firstItem="rmE-Nv-Sqm" firstAttribute="leading" secondItem="bah-tV-B5c" secondAttribute="leading" constant="20" id="08b-qz-QGq"/>
+                            <constraint firstItem="bah-tV-B5c" firstAttribute="trailing" secondItem="f3J-Oy-Dk3" secondAttribute="trailing" constant="20" id="3D8-lf-Llk"/>
                             <constraint firstItem="eUb-od-O8w" firstAttribute="leading" secondItem="bah-tV-B5c" secondAttribute="leading" constant="63" id="81l-iM-lIR"/>
+                            <constraint firstItem="f3J-Oy-Dk3" firstAttribute="leading" secondItem="bah-tV-B5c" secondAttribute="leading" constant="20" id="Aa9-9x-oe4"/>
                             <constraint firstItem="bah-tV-B5c" firstAttribute="bottom" secondItem="tUt-Oh-Qp7" secondAttribute="bottom" constant="30" id="BO9-ZN-8wV"/>
-                            <constraint firstItem="OvB-8A-KL6" firstAttribute="leading" secondItem="bah-tV-B5c" secondAttribute="leading" constant="20" id="C9j-cJ-uKb"/>
+                            <constraint firstItem="rmE-Nv-Sqm" firstAttribute="top" secondItem="hw6-GG-Lat" secondAttribute="bottom" constant="11" id="ED8-If-F8W"/>
                             <constraint firstItem="hw6-GG-Lat" firstAttribute="top" secondItem="eUb-od-O8w" secondAttribute="bottom" constant="8" id="Ghh-c6-uMw"/>
                             <constraint firstItem="hw6-GG-Lat" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="Gjj-63-6JM"/>
+                            <constraint firstItem="f3J-Oy-Dk3" firstAttribute="top" secondItem="rmE-Nv-Sqm" secondAttribute="bottom" constant="8" symbolic="YES" id="Hri-Ht-847"/>
+                            <constraint firstItem="OvB-8A-KL6" firstAttribute="top" secondItem="f3J-Oy-Dk3" secondAttribute="bottom" constant="8" symbolic="YES" id="IdU-Wh-ZFp"/>
                             <constraint firstItem="eUb-od-O8w" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="JVu-de-fhl"/>
                             <constraint firstItem="cWi-rT-NYb" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="N3P-IF-63I"/>
-                            <constraint firstItem="cWi-rT-NYb" firstAttribute="top" secondItem="OvB-8A-KL6" secondAttribute="bottom" constant="15" id="NE9-6h-MnS"/>
                             <constraint firstItem="bah-tV-B5c" firstAttribute="trailing" secondItem="OvB-8A-KL6" secondAttribute="trailing" constant="20" id="NXi-O2-aP2"/>
-                            <constraint firstItem="OvB-8A-KL6" firstAttribute="top" secondItem="rmE-Nv-Sqm" secondAttribute="bottom" constant="10" id="TbB-Va-OE5"/>
-                            <constraint firstItem="OvB-8A-KL6" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="a4z-xd-2ls"/>
-                            <constraint firstItem="eUb-od-O8w" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="bSU-Zi-NMW"/>
-                            <constraint firstItem="rmE-Nv-Sqm" firstAttribute="top" secondItem="hw6-GG-Lat" secondAttribute="bottom" constant="15" id="cfh-IW-cpU"/>
-                            <constraint firstItem="eUb-od-O8w" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="f9P-m5-K4C"/>
-                            <constraint firstItem="rmE-Nv-Sqm" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="fLO-86-HOI"/>
+                            <constraint firstItem="bah-tV-B5c" firstAttribute="trailing" secondItem="rmE-Nv-Sqm" secondAttribute="trailing" constant="20" id="Ror-kT-tbM"/>
+                            <constraint firstItem="OvB-8A-KL6" firstAttribute="leading" secondItem="bah-tV-B5c" secondAttribute="leading" constant="20" id="WrX-eb-YQY"/>
+                            <constraint firstItem="hw6-GG-Lat" firstAttribute="top" secondItem="eUb-od-O8w" secondAttribute="bottom" constant="8" symbolic="YES" id="cy6-gE-agp"/>
                             <constraint firstItem="eUb-od-O8w" firstAttribute="top" secondItem="bah-tV-B5c" secondAttribute="top" constant="70" id="hTy-Hv-nsY"/>
                             <constraint firstItem="tUt-Oh-Qp7" firstAttribute="centerX" secondItem="pBT-kK-59z" secondAttribute="centerX" id="qeh-SE-Ych"/>
-                            <constraint firstItem="bah-tV-B5c" firstAttribute="trailing" secondItem="rmE-Nv-Sqm" secondAttribute="trailing" constant="20" id="rJt-Rm-dm1"/>
+                            <constraint firstItem="cWi-rT-NYb" firstAttribute="top" secondItem="OvB-8A-KL6" secondAttribute="bottom" constant="18" id="roX-S9-qkC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bah-tV-B5c"/>
                     </view>
                     <navigationItem key="navigationItem" id="AIS-gH-Vi9"/>
                     <connections>
@@ -227,30 +234,13 @@
                         <outlet property="passwordTextfield" destination="OvB-8A-KL6" id="EUx-Cc-lHp"/>
                         <outlet property="registerButton" destination="cWi-rT-NYb" id="36d-ve-azA"/>
                         <outlet property="signInButton" destination="JYz-CU-mUw" id="DAo-BO-fmy"/>
+                        <outlet property="usernameTextfield" destination="f3J-Oy-Dk3" id="VIx-ta-ahe"/>
+                        <segue destination="0FR-8Z-vrt" kind="presentation" identifier="registerToGuides" modalPresentationStyle="fullScreen" id="a64-Iw-mNg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSO-H0-f2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1126" y="-1640"/>
-        </scene>
-        <!--Feedback-->
-        <scene sceneID="Gua-Cl-vn7">
-            <objects>
-                <navigationController id="O31-SD-heP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feedback" image="feedback" id="1WS-Cg-chq" userLabel="Feedback">
-                        <inset key="imageInsets" minX="-1" minY="-40" maxX="-1" maxY="-43"/>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="blU-aj-Nt5">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="eq2-cb-yPY" kind="relationship" relationship="rootViewController" id="O0f-eO-ugN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oyn-4s-C2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="462" y="-862"/>
         </scene>
         <!--ProfileNav-->
         <scene sceneID="kbE-UG-ELG">
@@ -268,11 +258,12 @@
         <scene sceneID="tCP-P3-NLx">
             <objects>
                 <viewControllerPlaceholder storyboardName="Feedback" id="eq2-cb-yPY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rNd-g5-HZW"/>
                     <navigationItem key="navigationItem" id="Dwk-27-L79"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvb-se-5nf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="-862"/>
+            <point key="canvasLocation" x="-452" y="-876"/>
         </scene>
         <!--Ask-->
         <scene sceneID="8c3-vf-6LD">
@@ -316,7 +307,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cTx-ws-SOR">
                                 <rect key="frame" x="0.0" y="44" width="375" height="749"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GCf-vV-WVb">
                                     <size key="itemSize" width="307" height="335"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -332,16 +323,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Osc-VF-TXV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="275"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="257"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-cw-oA7" userLabel="Title Label">
-                                                    <rect key="frame" x="0.0" y="283" width="91" height="22"/>
+                                                    <rect key="frame" x="0.0" y="260" width="307" height="19"/>
                                                     <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8G-0j-Hiu" userLabel="Content Label">
-                                                    <rect key="frame" x="0.0" y="310" width="37" height="17"/>
+                                                    <rect key="frame" x="0.0" y="279" width="307" height="56"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -373,8 +364,8 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gcv-Zp-Af5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="kxu-CI-cwQ"/>
                     <connections>
@@ -429,11 +420,11 @@
                                                     <constraint firstAttribute="height" constant="600" id="ELt-or-Wme"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-Vb-wtD">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-Vb-wtD">
                                                 <rect key="frame" x="0.0" y="941" width="375" height="32"/>
                                                 <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="17"/>
                                                 <state key="normal" title="See the collection">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleColor" systemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="photoDetailButtonPressed:" destination="J3k-hL-cks" eventType="touchUpInside" id="wYD-2Y-hxw"/>
@@ -441,7 +432,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="YQA-BO-m05" firstAttribute="top" secondItem="n2P-aG-mTs" secondAttribute="bottom" constant="3" id="1Ga-Vt-IYR"/>
                                             <constraint firstItem="e7j-Vb-wtD" firstAttribute="leading" secondItem="vfL-M8-mxt" secondAttribute="leading" id="4O9-x5-X2t"/>
@@ -477,14 +468,14 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="kJQ-me-9ij"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gcz-Xr-2hK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gcz-Xr-2hK" firstAttribute="trailing" secondItem="KT4-2x-Q0W" secondAttribute="trailing" id="TaL-hI-NAS"/>
                             <constraint firstItem="KT4-2x-Q0W" firstAttribute="leading" secondItem="gcz-Xr-2hK" secondAttribute="leading" id="bUC-bz-Sye"/>
                             <constraint firstItem="gcz-Xr-2hK" firstAttribute="bottom" secondItem="KT4-2x-Q0W" secondAttribute="bottom" id="ipU-eN-bOC"/>
                             <constraint firstItem="KT4-2x-Q0W" firstAttribute="top" secondItem="gcz-Xr-2hK" secondAttribute="top" id="qDc-Zr-VWH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gcz-Xr-2hK"/>
                     </view>
                     <navigationItem key="navigationItem" id="vzW-dA-Is9"/>
                     <size key="freeformSize" width="375" height="1060"/>
@@ -508,8 +499,8 @@
                     <view key="view" contentMode="scaleToFill" id="Qf7-xg-uGm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Pkd-mn-KF4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDR-GQ-o3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -517,13 +508,33 @@
             <point key="canvasLocation" x="2681" y="-1881"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="a64-Iw-mNg"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="ask" width="16.666666030883789" height="16.666666030883789"/>
-        <image name="feedback" width="16.666666030883789" height="16.666666030883789"/>
         <image name="guides" width="16.5" height="16.5"/>
         <image name="profile" width="16.666666030883789" height="16.666666030883789"/>
         <namedColor name="BrandColor3">
             <color red="0.86699998378753662" green="0.90200001001358032" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
