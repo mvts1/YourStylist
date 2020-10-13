@@ -12,6 +12,9 @@
         <array key="Raleway-Medium.ttf">
             <string>Raleway-Medium</string>
         </array>
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
         <array key="Raleway-SemiBold.ttf">
             <string>Raleway-SemiBold</string>
         </array>
@@ -47,15 +50,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Describe your vision for the outfit or ask for advice" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="53M-jY-vcI">
-                                <rect key="frame" x="8" y="125" width="398" height="33"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Describe your vision for the outfit or ask for advice..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="53M-jY-vcI">
+                                <rect key="frame" x="8" y="162" width="398" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-AR-eSQ">
-                                <rect key="frame" x="5" y="158" width="404" height="655"/>
+                                <rect key="frame" x="5" y="195" width="404" height="618"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNg-ly-m7i">
                                         <rect key="frame" x="8" y="0.0" width="190" height="279"/>
@@ -85,35 +88,43 @@
                                 <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-n6-X1X">
-                                <rect key="frame" x="8" y="101" width="234" height="19"/>
+                                <rect key="frame" x="8" y="101" width="202" height="19"/>
                                 <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="14"/>
-                                <state key="normal" title=" Attach photos to your question " image="photo.fill" catalog="system">
+                                <state key="normal" title=" Attach photos to your post" image="photo.fill" catalog="system">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="showImagePicker:" destination="oQs-7X-Uge" eventType="touchUpInside" id="k8D-Mw-4eR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a title for your post..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T2k-ua-EtZ">
+                                <rect key="frame" x="8" y="128" width="398" height="34"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HEr-JF-iBA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gcZ-yo-etl" firstAttribute="trailing" secondItem="AiZ-3J-lh0" secondAttribute="trailing" id="1mN-FF-R2e"/>
+                            <constraint firstItem="NyV-AR-eSQ" firstAttribute="top" secondItem="53M-jY-vcI" secondAttribute="bottom" id="3FK-lx-qF2"/>
                             <constraint firstItem="AiZ-3J-lh0" firstAttribute="top" secondItem="HEr-JF-iBA" secondAttribute="top" id="3Ih-ti-3IV"/>
                             <constraint firstItem="AiZ-3J-lh0" firstAttribute="centerX" secondItem="g4y-YL-kB9" secondAttribute="centerX" id="60W-JL-Nrs"/>
                             <constraint firstItem="AiZ-3J-lh0" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" id="Cfu-lC-SJR"/>
                             <constraint firstItem="gcZ-yo-etl" firstAttribute="leading" secondItem="AiZ-3J-lh0" secondAttribute="leading" id="DmL-UV-HvC"/>
                             <constraint firstItem="NyV-AR-eSQ" firstAttribute="centerX" secondItem="g4y-YL-kB9" secondAttribute="centerX" id="Epd-V2-v2v"/>
                             <constraint firstItem="HEr-JF-iBA" firstAttribute="trailing" secondItem="NyV-AR-eSQ" secondAttribute="trailing" constant="5" id="Mk9-Z6-T7V"/>
+                            <constraint firstItem="HEr-JF-iBA" firstAttribute="trailing" secondItem="T2k-ua-EtZ" secondAttribute="trailing" constant="8" id="WvF-Eo-wBn"/>
                             <constraint firstItem="6Db-n6-X1X" firstAttribute="top" secondItem="gcZ-yo-etl" secondAttribute="bottom" constant="8" id="ZaC-Hv-tr8"/>
                             <constraint firstItem="6Db-n6-X1X" firstAttribute="leading" secondItem="53M-jY-vcI" secondAttribute="leading" id="Ztd-iY-L35"/>
+                            <constraint firstItem="T2k-ua-EtZ" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" constant="8" id="Zwc-Q6-Dfp"/>
                             <constraint firstItem="HEr-JF-iBA" firstAttribute="trailing" secondItem="53M-jY-vcI" secondAttribute="trailing" constant="8" id="a1F-SR-2JV"/>
                             <constraint firstItem="HEr-JF-iBA" firstAttribute="bottom" secondItem="NyV-AR-eSQ" secondAttribute="bottom" id="dir-9Z-NxY"/>
                             <constraint firstItem="gcZ-yo-etl" firstAttribute="top" secondItem="AiZ-3J-lh0" secondAttribute="bottom" id="lwe-Yp-Gih"/>
                             <constraint firstItem="NyV-AR-eSQ" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" constant="5" id="mah-WI-Pk9"/>
-                            <constraint firstItem="53M-jY-vcI" firstAttribute="top" secondItem="6Db-n6-X1X" secondAttribute="bottom" constant="5" id="o2P-F8-dRO"/>
+                            <constraint firstItem="T2k-ua-EtZ" firstAttribute="top" secondItem="6Db-n6-X1X" secondAttribute="bottom" constant="8" symbolic="YES" id="sRe-Jj-jq7"/>
                             <constraint firstItem="53M-jY-vcI" firstAttribute="leading" secondItem="HEr-JF-iBA" secondAttribute="leading" constant="8" id="wkW-ae-1UP"/>
-                            <constraint firstItem="NyV-AR-eSQ" firstAttribute="top" secondItem="53M-jY-vcI" secondAttribute="bottom" id="zk6-f4-hxj"/>
+                            <constraint firstItem="53M-jY-vcI" firstAttribute="top" secondItem="T2k-ua-EtZ" secondAttribute="bottom" id="y9A-Af-iiw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ask" image="ask" id="REd-Tj-apw"/>
@@ -128,6 +139,7 @@
                         <outlet property="imageView" destination="VNg-ly-m7i" id="j4g-fw-dXz"/>
                         <outlet property="pickerButton" destination="6Db-n6-X1X" id="cya-Kw-7VC"/>
                         <outlet property="progressBar" destination="gcZ-yo-etl" id="efo-Xs-KNI"/>
+                        <outlet property="questionTextField" destination="T2k-ua-EtZ" id="4JF-5g-eLc"/>
                         <outlet property="shareButton" destination="sfc-CE-6CC" id="fL9-gd-zCg"/>
                         <outlet property="textView" destination="53M-jY-vcI" id="8nF-YY-6f1"/>
                     </connections>

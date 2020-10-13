@@ -58,7 +58,8 @@ class RegisterViewController: UIViewController {
                             "userId": userId,
                             "username": username,
                             "email" : email,
-                            "user_type": user_type
+                            "user_type": user_type,
+                            "post_num": 0
                         ]) { err in
                             if let err = err {
                                 print("Error writing document: \(err)")

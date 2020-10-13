@@ -176,7 +176,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="3gG-Uk-Vzk" eventType="touchUpInside" id="z2O-Ji-sx4"/>
-                                            <segue destination="3gG-Uk-Vzk" kind="presentation" identifier="backToWelcome" modalPresentationStyle="fullScreen" id="Zhr-Fg-LMg"/>
                                         </connections>
                                     </button>
                                 </subviews>

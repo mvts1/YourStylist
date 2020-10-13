@@ -13,12 +13,16 @@ class Post {
     var images: [UIImage]
     var comments: [String]
     var userId: String
-    var likes: Int
+    var date: String
+    var title: String
+    var explanation: String
     
-    init(images: [UIImage], comments: [String], userId: String, likes: Int) {
+    init(explanation: String, title: String, images: [UIImage], comments: [String], userId: String, likes: Int, date: String) {
         self.images = images
         self.comments = comments
         self.userId = userId
-        self.likes = likes
+        self.date = date
+        self.title = title
+        self.explanation = explanation
     }
 }

@@ -9,13 +9,17 @@
 import UIKit
 import FirebaseStorage
 import FirebaseAuth
+import Firebase
 
 class AskViewController: UIViewController {
+    
+    let db = Firestore.firestore()
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var questionTextField: UITextField!
     
     var imagePicker: ImagePicker!
     @IBOutlet weak var pickerButton: UIButton!
@@ -23,8 +27,8 @@ class AskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        textView.textColor = UIColor.lightGray
-//        textView.delegate = self
+        textView.textColor = UIColor.lightGray
+        textView.delegate = self
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         pruneNegativeWidthConstraints()
 //
@@ -41,11 +45,30 @@ class AskViewController: UIViewController {
 
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         if let user = Auth.auth().currentUser { //checks if there's a current user
+            
+            guard let titleText = questionTextField.text else {
+                let alert = UIAlertController(title: "A title is needed for your post", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Button", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+                }
+            guard let explanation = textView.text else {
+                let alert = UIAlertController(title: "You should provide more information", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Button", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            let currentDate = Date().description
+            
             progressBar.isHidden = false
+            
+            let userId = user.uid
             let imageId: String = UUID().uuidString.lowercased().replacingOccurrences(of: "-", with: "_")
+            let postId: String = UUID().uuidString.lowercased().replacingOccurrences(of: "-", with: "_")
             let imageName = "\(imageId).jpg"
             //create the path to this image on cloud, a folder for each user
-            let pathToPicture = "images/\(user.uid)/\(imageName)"
+            let pathToPicture = "images/\(user.uid)/\(postId)/\(imageName)"
+            
             let storageRef = Storage.storage().reference(withPath: pathToPicture)
             guard let imageData = imageView.image?.jpegData(compressionQuality: 0.75) else { return }
             let metaData = StorageMetadata()
@@ -63,6 +86,25 @@ class AskViewController: UIViewController {
                 guard let pctThere = snapshot.progress?.fractionCompleted else { return }
                 print("You are \(pctThere) complete")
                 self?.progressBar.progress = Float(pctThere)
+            }
+            
+            //update posts collection in the database. Comments and likes will be saved there.
+            self.db.collection("users").document(userId).setData([
+            "posts": [postId: [
+            "date": currentDate,
+            "question_title": titleText,
+            "explanation": explanation
+            ]]
+            ], merge: true) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { //to delay the dismiss method call
+                self.dismiss(animated: true, completion: nil)
             }
             
         }
@@ -100,8 +142,8 @@ extension AskViewController: ImagePickerDelegate {
 extension AskViewController: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = nil
         if textView.textColor == UIColor.lightGray {
-            textView.text = nil
             textView.textColor = UIColor.black
         }
     }

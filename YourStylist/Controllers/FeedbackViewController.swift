@@ -8,38 +8,24 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController, UITableViewDelegate {
+class FeedbackViewController: UITableViewController {
+    //All the posts belonging to a user should be fetched from the server.
 
-    @IBOutlet weak var tableView: UITableView!
-    var currentTableView: Int!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
     }
+
+// MARK: - Data Source Methods
     
-    @IBAction func switchTableViewAction(_ sender: UISegmentedControl) {
-        currentTableView = sender.selectedSegmentIndex
-        tableView.reloadData()
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    }
+
+
 }
-
-//extension FeedbackViewController: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        //how many posts the user has uploaded?
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//
-//    }
-//
-//
-//}
-
-
-
