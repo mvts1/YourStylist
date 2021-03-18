@@ -1,6 +1,6 @@
 ### YourStylist
 
-I wanted to create an app from which user can read about the fashion events and send their photos to ask for advice. Cloud Firestore is being used for the database and authentication.
+I wanted to create an app from which users can read about fashion events and send their photos to ask for style advice. Cloud Firestore is being used for the database and authentication.
 
 <img width="335" alt="Screen Shot 2021-03-17 at 22 50 59" src="https://user-images.githubusercontent.com/51910678/111530212-1698c980-8774-11eb-90a8-a33477d1139a.png">
 
